@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getSmurfData, isLoading } from "../actions";
+import { getSmurfData } from "../actions";
+import { isLoading } from "../reducers"
 import "./App.css";
 import SmurfForm from "./SmurfForm";
 import SmurfsList from "./SmurfList";
