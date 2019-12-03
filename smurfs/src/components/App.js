@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getSmurfData, isLoading } from "../actions";
 import "./App.css";
 import SmurfForm from "./SmurfForm";
-import SmurfsList from "./SmurfsList";
+import SmurfsList from "./SmurfList";
 
 class App extends Component {
   componentDidMount() {

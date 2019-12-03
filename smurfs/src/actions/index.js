@@ -28,10 +28,10 @@ export const getSmurfData = () => dispatch => {
     });
 };
 
-export const addSmurfData = () => dispatch => {
+export const addSmurfData = data => dispatch => {
   dispatch({ type: ADD_SMURF_START });
   axios
-    .post("http://localhost:3333/smurfs")
+    .post("http://localhost:3333/smurfs", data)
     .then(res => {
       console.log("POST: We delivered the package", res);
       dispatch({
@@ -40,7 +40,7 @@ export const addSmurfData = () => dispatch => {
       });
     })
     .catch(err => {
-      console.log("you failed", err);
+      console.log("POST: you failed", err);
       dispatch({
         type: ADD_SMURF_FAILED,
         payload: err

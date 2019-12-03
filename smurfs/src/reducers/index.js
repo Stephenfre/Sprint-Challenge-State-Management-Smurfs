@@ -44,7 +44,9 @@ const reducers = (state = initialState, action) => {
     case ADD_SMURF_SUCCESS:
       return {
         ...state,
-        smurfs: [...state.smurfs, action.payload]
+        smurfs: [...action.payload],
+        error: "",
+        isLoading: false
       };
 
     case ADD_SMURF_FAILED:
